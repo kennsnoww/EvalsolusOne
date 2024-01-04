@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Criteria</title>
+    <link rel="stylesheet"  type="text/css" th:href="@{/addCriteria.css}">
+</head>
+<body>
+
+
+
+<form action="/addCriteria" method="post">
+    <h2>Add Criteria</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required>
+
+    <!-- Ajoutez d'autres champs au besoin -->
+
+    <button type="submit">Add Criteria</button>
+</form>
+
+</body>
+</html>

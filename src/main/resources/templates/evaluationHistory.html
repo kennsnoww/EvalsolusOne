@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Evaluation History</title>
+    <link rel="stylesheet"  type="text/css" th:href="@{/evaluationHistory.css}">
+</head>
+<body>
+
+<h2>Evaluation History</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Criteria ID</th>
+        <th>Rating</th>
+        <th>Comments</th>
+        <!-- Ajoutez d'autres colonnes au besoin -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="evaluation : ${evaluationHistory}">
+        <td th:text="${evaluation.id}"></td>
+        <td th:text="${evaluation.criteriaId}"></td>
+        <td th:text="${evaluation.rating}"></td>
+        <td th:text="${evaluation.comments}"></td>
+        <!-- Ajoutez d'autres colonnes au besoin -->
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
