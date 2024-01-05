@@ -1,7 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <link rel="stylesheet"  type="text/css" th:href="@{/home.css}">
+<link rel="stylesheet"  type="text/css" th:href="@{/style.css}">
 <head>
 
     <meta charset="UTF-8">
@@ -14,30 +14,9 @@
     <li><a th:href="@{/criteriaList}">View Criteria</a></li>
     <li><a th:href="@{/evaluate}">Evaluate</a></li>
     <li><a th:href="@{/evaluationHistory}">View Evaluation History</a></li>
+    <li><a th:href="@{/addCriteria}"> add Criteria</a></li>
 
 </ul>
 </body>
 </html>
 
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-<h1>Login</h1>
-<form action="{{ url_for('login') }}" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-    <br>
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-    <br>
-    <input type="submit" value="Login">
-</form>
-<p><a href="{{ url_for('register') }}">Register</a></p>
-</body>
-</html>-->

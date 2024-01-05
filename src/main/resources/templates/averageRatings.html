@@ -1,0 +1,32 @@
+<!-- averageRatings.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Average Ratings</title>
+    <!-- Ajoutez les liens vers les fichiers CSS au besoin -->
+</head>
+<body>
+
+<h2>Average Ratings</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Criteria ID</th>
+        <th>Name</th>
+        <th>Average Rating</th>
+        <!-- Ajoutez d'autres colonnes au besoin -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="entry : ${averageRatings}">
+        <td th:text="${entry.key.id}"></td>
+        <td th:text="${entry.key.name}"></td>
+        <td th:text="${entry.value}"></td>
+        <!-- Ajoutez d'autres colonnes au besoin -->
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -28,6 +28,15 @@ public class LoginController {
         return "home";
     }
 
+
+
+    @GetMapping("/addCriteria")
+    public String showaddPage() {
+        return "addCriteria";
+    }
+
+
+
     @GetMapping("/home")
     public String showHomePage() {
         return "home";

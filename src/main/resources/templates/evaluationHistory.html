@@ -3,6 +3,8 @@
 <head>
     <title>Evaluation History</title>
     <link rel="stylesheet"  type="text/css" th:href="@{/evaluationHistory.css}">
+    <link rel="stylesheet"  type="text/css" th:href="@{/style.css}">
+
 </head>
 <body>
 
@@ -19,13 +21,20 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="evaluation : ${evaluationHistory}">
+   <!-- <tr th:each="evaluation : ${evaluationHistory}">
         <td th:text="${evaluation.id}"></td>
         <td th:text="${evaluation.criteriaId}"></td>
         <td th:text="${evaluation.rating}"></td>
         <td th:text="${evaluation.comments}"></td>
-        <!-- Ajoutez d'autres colonnes au besoin -->
-    </tr>
+        &lt;!&ndash; Ajoutez d'autres colonnes au besoin &ndash;&gt;
+    </tr>-->
+   <tr th:each="evaluation : ${evaluationHistory}">
+       <td th:text="${evaluation.id}"></td>
+       <td th:text="${evaluation.criteriaName}"></td>
+       <td th:text="${evaluation.rating}"></td>
+       <td th:text="${evaluation.comments}"></td>
+       <!-- ... -->
+   </tr>
     </tbody>
 </table>
 

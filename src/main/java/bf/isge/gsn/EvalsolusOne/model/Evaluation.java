@@ -17,7 +17,5 @@ public class Evaluation {
     private Long criteriaId; // ID du critère évalué
     private int rating; // Note attribuée à l'évaluation
     private String comments;
-    // Ajoutez d'autres attributs au besoin
 
-    // Ajoutez les getters et setters
 }

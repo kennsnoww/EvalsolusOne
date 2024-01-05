@@ -1,6 +1,5 @@
 package bf.isge.gsn.EvalsolusOne.service;
 
-import bf.isge.gsn.EvalsolusOne.model.Criteria;
 import bf.isge.gsn.EvalsolusOne.model.Evaluation;
 import bf.isge.gsn.EvalsolusOne.repository.EvaluationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,14 +20,14 @@ public class EvaluationServiceImpl implements EvaluationService {
 
     @Override
     public List<Evaluation> getEvaluationsByCriteria(Long criteriaId) {
-        return evaluationRepository.findByCriteriaId(criteriaId);
+        return EvaluationRepository.findByCriteriaId(criteriaId);
     }
 
     //@Override
     //public Evaluation submitEvaluation(Evaluation evaluation) {
      //   return evaluationRepository.save(evaluation);
    // }
-   /* @Override
+    @Override
     public Evaluation submitEvaluation(Evaluation evaluation) {
         // Vérifiez que la note est dans la plage de 0 à 5
         if (evaluation.getRating() >= 0 && evaluation.getRating() <= 5) {
@@ -37,32 +36,11 @@ public class EvaluationServiceImpl implements EvaluationService {
             // Gérez l'erreur ou renvoyez un objet d'erreur, selon vos besoins
             throw new IllegalArgumentException("La note doit être comprise entre 0 et 5.");
         }
-    }*/
-    @Override
-    public Evaluation submitEvaluation(Evaluation evaluation) {
-        Long criteriaId = evaluation.getCriteriaId();
-
-        // Vérifier si le critère associé à l'évaluation existe
-        Criteria associatedCriteria = CriteriaService.getCriteriaById(criteriaId);
-        if (associatedCriteria == null) {
-            throw new IllegalArgumentException("Le critère associé à l'évaluation n'existe pas.");
-        }
-
-        // Vérifier si la note est dans la plage de 0 à 5
-        int rating = evaluation.getRating();
-        if (rating < 0 || rating > 5) {
-            throw new IllegalArgumentException("La note de l'évaluation doit être comprise entre 0 et 5.");
-        }
-
-        // Enregistrer l'évaluation seulement si la validation réussit
-        return evaluationRepository.save(evaluation);
     }
-
-
 
     @Override
     public double getAverageRating(Long criteriaId) {
-        List<Evaluation> evaluations = evaluationRepository.findByCriteriaId(criteriaId);
+        List<Evaluation> evaluations = EvaluationRepository.findByCriteriaId(criteriaId);
         if (evaluations.isEmpty()) {
             return 0.0;
         }
