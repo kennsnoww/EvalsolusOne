@@ -38,8 +38,6 @@ public class EvaluationController {
 
 
 
-
-
     @GetMapping("/evaluate")
     public String showEvaluationForm(Model model) {
         List<Criteria> criteriaList = criteriaService.getAllCriteria();

@@ -1,9 +1,9 @@
-<!-- averageRatings.html -->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Average Ratings</title>
-    <!-- Ajoutez les liens vers les fichiers CSS au besoin -->
+    <link rel="stylesheet" type="text/css" th:href="@{/style.css}">
+    <link rel="stylesheet"  type="text/css" th:href="@{/averageRatings.css}">
 </head>
 <body>
 
@@ -15,18 +15,21 @@
         <th>Criteria ID</th>
         <th>Name</th>
         <th>Average Rating</th>
-        <!-- Ajoutez d'autres colonnes au besoin -->
     </tr>
     </thead>
     <tbody>
     <tr th:each="entry : ${averageRatings}">
         <td th:text="${entry.key.id}"></td>
         <td th:text="${entry.key.name}"></td>
-        <td th:text="${entry.value}"></td>
-        <!-- Ajoutez d'autres colonnes au besoin -->
+        <td>
+            <th:block th:if="${entry.value != null}">
+                <span th:text="${#numbers.formatDecimal(entry.value, 1, 2)}"></span>
+            </th:block>
+        </td>
     </tr>
     </tbody>
 </table>
 
 </body>
 </html>
+

@@ -6,7 +6,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface EvaluationRepository extends JpaRepository<Evaluation, Long> {
-    static List<Evaluation> findByCriteriaId(Long criteriaId) {
-        return null;
-    }
+    List<Evaluation> findByCriteriaId(Long criteriaId);
 }

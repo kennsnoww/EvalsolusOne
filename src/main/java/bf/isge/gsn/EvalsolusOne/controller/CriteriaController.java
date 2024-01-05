@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
-import java.util.Map;
 /*
 @Controller
 public class CriteriaController {
@@ -54,13 +53,6 @@ public class CriteriaController {
     public String addCriteria(@ModelAttribute Criteria criteria) {
         criteriaService.createCriteria(criteria);
         return "redirect:/criteriaList";
-    }
-
-    @GetMapping("/averageRatings")
-    public String showAverageRatings(Model model) {
-        Map<Criteria, Double> averageRatings = criteriaService.getAverageRatings();
-        model.addAttribute("averageRatings", averageRatings);
-        return "averageRatings";
     }
 
 }

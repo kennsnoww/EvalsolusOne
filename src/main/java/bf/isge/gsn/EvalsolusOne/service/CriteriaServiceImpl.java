@@ -17,6 +17,9 @@ public class CriteriaServiceImpl implements CriteriaService {
     @Autowired
     private CriteriaRepository criteriaRepository;
 
+    @Autowired
+    private EvaluationRepository evaluationRepository; // Ajoutez cette ligne pour l'injection
+
     @Override
     public List<Criteria> getAllCriteria() {
         return criteriaRepository.findAll();
@@ -27,14 +30,13 @@ public class CriteriaServiceImpl implements CriteriaService {
         return criteriaRepository.save(criteria);
     }
 
-
     @Override
     public Map<Criteria, Double> getAverageRatings() {
         Map<Criteria, Double> averageRatings = new HashMap<>();
 
         List<Criteria> allCriteria = criteriaRepository.findAll();
         for (Criteria criteria : allCriteria) {
-            List<Evaluation> evaluations = EvaluationRepository.findByCriteriaId(criteria.getId());
+            List<Evaluation> evaluations = evaluationRepository.findByCriteriaId(criteria.getId());
 
             if (evaluations.isEmpty()) {
                 averageRatings.put(criteria, 0.0);

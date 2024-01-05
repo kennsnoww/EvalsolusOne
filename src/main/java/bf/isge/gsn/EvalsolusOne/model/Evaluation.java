@@ -14,8 +14,8 @@ public class Evaluation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long criteriaId; // ID du critère évalué
-    private int rating; // Note attribuée à l'évaluation
+    private Long criteriaId;
+    private int rating;
     private String comments;
 
 }

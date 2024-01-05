@@ -28,8 +28,6 @@ public class LoginController {
         return "home";
     }
 
-
-
     @GetMapping("/addCriteria")
     public String showaddPage() {
         return "addCriteria";
@@ -48,5 +46,4 @@ public class LoginController {
         return new ModelAndView(new RedirectView("/home"));
     }
 
-    // Ajoutez d'autres méthodes au besoin
 }

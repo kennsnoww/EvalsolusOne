@@ -1,7 +1,6 @@
 package bf.isge.gsn.EvalsolusOne.service;
 
 import bf.isge.gsn.EvalsolusOne.model.Evaluation;
-import bf.isge.gsn.EvalsolusOne.model.Criteria;
 
 import java.util.List;
 public interface EvaluationService {
