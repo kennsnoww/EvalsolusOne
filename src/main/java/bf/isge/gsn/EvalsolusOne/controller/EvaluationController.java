@@ -18,7 +18,7 @@ import java.util.List;
 public class EvaluationController {
 
     private final EvaluationService evaluationService;
-    private final CriteriaService criteriaService; // Assurez-vous d'avoir une référence à CriteriaService
+    private final CriteriaService criteriaService;
 
     @Autowired
     public EvaluationController(EvaluationService evaluationService, CriteriaService criteriaService) {
@@ -33,11 +33,6 @@ public class EvaluationController {
         return "evaluationHistory";
     }
 
-
-
-
-
-
     @GetMapping("/evaluate")
     public String showEvaluationForm(Model model) {
         List<Criteria> criteriaList = criteriaService.getAllCriteria();
@@ -51,7 +46,6 @@ public class EvaluationController {
     public String submitEvaluation(@RequestParam("criteriaId") Long criteriaId,
                                    @RequestParam("rating") int rating,
                                    @RequestParam("comments") String comments) {
-        // Créez une instance d'Evaluation avec les valeurs récupérées
         Evaluation evaluation = new Evaluation();
         evaluation.setCriteriaId(criteriaId);
         evaluation.setRating(rating);
@@ -60,7 +54,6 @@ public class EvaluationController {
         // Soumettez l'évaluation
         evaluationService.submitEvaluation(evaluation);
 
-        // Redirigez vers la page d'historique des évaluations
         return "redirect:/evaluationHistory";
     }
 

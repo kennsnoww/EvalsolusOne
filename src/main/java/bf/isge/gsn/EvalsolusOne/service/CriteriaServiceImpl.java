@@ -18,7 +18,7 @@ public class CriteriaServiceImpl implements CriteriaService {
     private CriteriaRepository criteriaRepository;
 
     @Autowired
-    private EvaluationRepository evaluationRepository; // Ajoutez cette ligne pour l'injection
+    private EvaluationRepository evaluationRepository;
 
     @Override
     public List<Criteria> getAllCriteria() {

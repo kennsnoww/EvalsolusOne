@@ -1,3 +1,4 @@
+/*
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
@@ -39,4 +40,72 @@ tr:nth-child(even) {
 
 tr:hover {
     background-color: #f1f1f1;
+}
+*/
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h2 {
+  color: #3c40c6;
+  text-align: center;
+ margin-bottom: 30px;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+}
+
+th {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #e0e0e0;
+  transition: background-color 0.3s;
+}
+
+/* Ajoutez un effet de transition pour un changement en douceur */
+table {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Réduisez l'ombre au survol */
+table:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Ajoutez quelques styles pour rendre le tableau plus réactif */
+@media (max-width: 768px) {
+  table {
+    width: 100%;
+  }
 }

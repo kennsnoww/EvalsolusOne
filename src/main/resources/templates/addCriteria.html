@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Add Criteria</title>
+    <title>Ajouter un critère</title>
     <link rel="stylesheet"  type="text/css" th:href="@{/addCriteria.css}">
     <link rel="stylesheet"  type="text/css" th:href="@{/style.css}">
 
 </head>
 <body>
-<!--<div th:replace="fragments/navbar :: navbar"></div>-->
 
 <form action="/addCriteria" method="post">
-    <h2>Add Criteria</h2>
+    <h2>Ajouter un critère</h2>
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -18,7 +17,10 @@
     <input type="text" id="description" name="description" required>
 
 
-    <button type="submit">Add Criteria</button>
+    <button type="submit"> Ajouter</button>
 </form>
+<div class="container">
+    <img src="/images/rafiki2.svg" alt="image">
+</div>
 </body>
 </html>

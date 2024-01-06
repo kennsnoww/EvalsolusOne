@@ -1,33 +1,4 @@
-<!--
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title>Evaluate</title>
-    <link rel="stylesheet"  type="text/css" th:href="@{/evaluate.css}">
-</head>
-<body>
 
-<h2>Evaluate</h2>
-
-&lt;!&ndash; Formulaire d'évaluation &ndash;&gt;
-<form action="/evaluate" method="post">
-    &lt;!&ndash; Ajoutez les champs du formulaire au besoin &ndash;&gt;
-    <label for="criteriaId">Criteria ID:</label>
-    <input type="text" id="criteriaId" name="criteriaId" required><br>
-
-    <label for="rating">Rating:</label>
-    <input type="number" id="rating" name="rating" required><br>
-
-    <label for="comments">Comments:</label>
-    <textarea id="comments" name="comments"></textarea><br>
-
-
-    <button type="submit">Submit Evaluation</button>
-</form>
-
-</body>
-</html>
--->
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -43,18 +14,17 @@
 <form action="/evaluate" method="post">
     <!-- Utilisez une liste déroulante pour sélectionner le critère -->
     <label for="criteriaId">Criteria:</label>
-    <select id="criteriaId" name="criteriaId" required>
-        <!-- Utilisez Thymeleaf pour itérer sur la liste des critères -->
+    <select id="criteriaId" nom="criteriaId" required>
         <option th:each="criteria : ${criteriaList}" th:value="${criteria.id}" th:text="${criteria.name}"></option>
     </select><br>
 
-    <label for="rating">Rating:</label>
+    <label for="rating">Noté:</label>
     <input type="number" id="rating" name="rating" required><br>
 
-    <label for="comments">Comments:</label>
+    <label for="comments">Commentaire:</label>
     <textarea id="comments" name="comments"></textarea><br>
 
-    <button type="submit">Submit Evaluation</button>
+    <button type="submit">Soumettre l'évaluation</button>
 </form>
 
 </body>

@@ -1,3 +1,4 @@
+
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f8f9fa;
@@ -18,7 +19,7 @@ h2 {
 form {
     width: 60%;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: #f5f5f5;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -30,14 +31,18 @@ label {
     color: #333;
 }
 
-input,
-textarea {
+input, textarea {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     box-sizing: border-box;
     border: 1px solid #ddd;
     border-radius: 4px;
+    background-color: #fff;
+}
+
+input:focus, textarea:focus {
+    border-color: #007bff;
 }
 
 button {
@@ -47,8 +52,11 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Ajout de transitions */
 }
 
 button:hover {
     background-color: #0056b3;
+    color: #fff;
 }
+

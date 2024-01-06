@@ -58,7 +58,6 @@ import java.util.List;
 
 @Service
 public class EvaluationServiceImpl implements EvaluationService {
-
     @Autowired
     private EvaluationRepository evaluationRepository;
 
@@ -78,7 +77,6 @@ public class EvaluationServiceImpl implements EvaluationService {
         if (evaluation.getRating() >= 0 && evaluation.getRating() <= 5) {
             return evaluationRepository.save(evaluation);
         } else {
-            // Gérez l'erreur ou renvoyez un objet d'erreur
             throw new IllegalArgumentException("La note doit être comprise entre 0 et 5.");
         }
     }

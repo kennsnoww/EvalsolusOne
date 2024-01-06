@@ -8,7 +8,7 @@ public interface EvaluationService {
     List<Evaluation> getEvaluationsByCriteria(Long criteriaId);
     Evaluation submitEvaluation(Evaluation evaluation);
     double getAverageRating(Long criteriaId);
-    // Ajoutez d'autres méthodes au besoin
+
 }
 
 

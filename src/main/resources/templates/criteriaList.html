@@ -6,16 +6,15 @@
     <link rel="stylesheet"  type="text/css" th:href="@{/style.css}">
 </head>
 <body>
-
+<div class="container">
 <h2>Criteria List</h2>
-
+</div>
 <table border="1">
     <thead>
     <tr>
         <th>ID</th>
-        <th>Name</th>
+        <th>Nom</th>
         <th>Description</th>
-        <!-- Ajoutez d'autres colonnes au besoin -->
     </tr>
     </thead>
     <tbody>
@@ -23,7 +22,6 @@
         <td th:text="${criteria.id}"></td>
         <td th:text="${criteria.name}"></td>
         <td th:text="${criteria.description}"></td>
-        <!-- Ajoutez d'autres colonnes au besoin -->
     </tr>
     </tbody>
 </table>
