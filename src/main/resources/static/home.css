@@ -46,3 +46,30 @@ a:hover {
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
     transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
 }
+#logo-container {
+    width: 140px;
+    height: 150px;
+    /*background-image: url('/images/logo.png');*/
+    background-size: cover;
+        position: fixed;
+        top: 0;
+        left: 0;
+}
+
+.container {
+      position: relative;
+      width: 80vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      width: 500px; /* Largeur de l'image */
+      height: 400px; /* Hauteur de l'image */
+      position: absolute;
+      top: 35%;
+      left: 20%;
+      transform: translate(-50%, -50%);
+    }

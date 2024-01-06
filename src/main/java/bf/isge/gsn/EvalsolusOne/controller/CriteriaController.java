@@ -11,25 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
-/*
-@Controller
-public class CriteriaController {
 
-    private final CriteriaService criteriaService;
-
-    public CriteriaController(CriteriaService criteriaService) {
-        this.criteriaService = criteriaService;
-    }
-
-    @GetMapping("/criteriaList")
-    public String getCriteriaList(Model model) {
-        List<Criteria> criteriaList = criteriaService.getAllCriteria();
-        model.addAttribute("criteriaList", criteriaList);
-        return "criteriaList";
-    }
-
-}
-*/
 
 @Controller
 public class CriteriaController {

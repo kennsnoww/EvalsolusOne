@@ -4,13 +4,10 @@ import bf.isge.gsn.EvalsolusOne.model.Criteria;
 import bf.isge.gsn.EvalsolusOne.model.Evaluation;
 import bf.isge.gsn.EvalsolusOne.service.CriteriaService;
 import bf.isge.gsn.EvalsolusOne.service.EvaluationService;
-//import ch.qos.logback.core.model.Model;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.ui.Model;
-
-
+import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.HashMap;
 import java.util.List;
@@ -18,6 +15,7 @@ import java.util.Map;
 
 
 @Controller
+
 public class AverageRatingsController {
 
     private final EvaluationService evaluationService;

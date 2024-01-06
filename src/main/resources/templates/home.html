@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <link rel="stylesheet"  type="text/css" th:href="@{/home.css}">
-<link rel="stylesheet"  type="text/css" th:href="@{/style.css}">
+<link rel="stylesheet"  type="text/css" th:href="@{/style1.css}">
 <head>
 
     <meta charset="UTF-8">
@@ -10,13 +10,15 @@
 </head>
 <body>
 <h1>Welcome to EvalsolusOne!</h1>
-<ul>
+<div id="logo-container"></div><ul>
     <li><a th:href="@{/criteriaList}">Voir Critère</a></li>
     <li><a th:href="@{/evaluate}">Evaluer</a></li>
     <li><a th:href="@{/evaluationHistory}">Historique évaluation</a></li>
     <li><a th:href="@{/addCriteria}"> Ajouter Critère</a></li>
     <li><a th:href="@{/averageRatings}"> Moyenne</a></li>
-
+    <div class="container">
+        <img src="/images/rafiki.svg" alt="image">
+    </div>
 </ul>
 </body>
 </html>
