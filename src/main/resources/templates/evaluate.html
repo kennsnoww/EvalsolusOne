@@ -14,7 +14,7 @@
 <form action="/evaluate" method="post">
     <!-- Utilisez une liste déroulante pour sélectionner le critère -->
     <label for="criteriaId">Criteria:</label>
-    <select id="criteriaId" nom="criteriaId" required>
+    <select id="criteriaId" name="criteriaId" required>
         <option th:each="criteria : ${criteriaList}" th:value="${criteria.id}" th:text="${criteria.name}"></option>
     </select><br>
 
